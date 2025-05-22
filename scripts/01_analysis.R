@@ -20,5 +20,11 @@ sampling1 <- sampling1 |>
 sampling1 <- sampling1 |>
   mutate(Trt = paste0("T", Trt_num))
 
-# Estadísticas por tratamiento
+unique(sampling1[,5:7])
+
+# Estadísticas por Trt_num, Planter_Trt y Residue_Trt
+
+# Boxplots 
+
+# Line plots (gráficos de línea o evolución)
 
