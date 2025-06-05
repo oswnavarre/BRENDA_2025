@@ -74,7 +74,7 @@ g1_3 <- ggplot(sampling1, aes(x = Minute, y = CO2_ppm )) +
   geom_point(stat = "summary", fun = "mean", aes(col = Trt)) +
   geom_line(stat = "summary", fun = "mean", aes(col = Trt)) +
   facet_wrap(.~ Trt) +
-  labs(x = "Minute", y= "C02_ppm") +
+  labs(x = "Minute", y= "CO2_ppm") +
   scale_x_continuous(breaks = c(0,30,60)) +
   theme_apa() +
   theme(
@@ -130,4 +130,5 @@ g2_3 <- ggplot(sampling1, aes(x = Minute, y = cum_co2 )) +
   )
 g2_3
 
-dddd
+# Hacer g1 y g1_2 para todas las variables.
+# Para todos los muestreos y por separado cada muestreo
