@@ -130,4 +130,39 @@ g2_3 <- ggplot(sampling1, aes(x = Minute, y = cum_co2 )) +
   )
 g2_3
 
-dddd
+
+# Análisis de la segunda variable. May 23rd viernes. 
+
+b1 <- ggplot(sampling1, aes(x = Minute, y = cum_n2o, fill = Trt)) +
+  geom_boxplot() +
+  labs(x = "Minute", y = "Cummulative N20_ppm") +
+  theme_apa() +
+  theme(
+    legend.position = "bottom"
+  )
+b1
+
+b2 <- ggplot(sampling1, aes(x = Minute, y = cum_n2o)) +
+  geom_point(stat = "summary", fun = "mean", aes(col = Trt)) +
+  geom_line(stat = "summary", fun = "mean", aes(col = Trt)) +
+  labs(x = "Minute", y= "Cummulative N20_ppm") +
+  facet_wrap(.~ Planter_Trt) +
+  scale_x_continuous(breaks = c(0,30,60)) +
+  scale_y_continuous(breaks = c(0,0.1,0.2)) +
+  theme_apa() +
+  theme(
+    legend.position = "bottom"
+  )
+b2
+
+b2_1 <- ggplot(sampling1, aes(x = Minute, y = cum_n2o)) +
+  geom_point(stat = "summary", fun = "mean", aes(col = Trt)) +
+  geom_line(stat = "summary", fun = "mean", aes(col = Trt)) +
+  labs(x = "Minute", y= "Cummulative N20_ppm") +
+  facet_wrap(.~ Planter_Trt) +
+  scale_x_continuous(breaks = c(0,30,60)) +
+  theme_apa() +
+  theme(
+    legend.position = "bottom"
+  )
+b2_1
